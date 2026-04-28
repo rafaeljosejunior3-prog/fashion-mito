@@ -217,7 +217,7 @@ const About = () => {
             <div className="absolute -top-6 -left-6 w-32 h-32 border-t-2 border-l-2 border-gold/40 z-0" />
             <img 
               src="/sobre-fundador.jpg" 
-              alt="Fundador da Fashion Mito - Alfaiataria em Maputo"
+              alt="Fundador da Fashion Mito'o - Alfaiataria em Maputo"
               className="relative z-10 w-full aspect-3/4 object-contain bg-zinc-900"
               referrerPolicy="no-referrer"
             />
@@ -233,7 +233,7 @@ const About = () => {
               A Arte da Alfaiataria <br /> <span className="italic text-gold">em sua forma mais pura</span>
             </h2>
             <p className="text-gray-400 leading-relaxed text-lg">
-              Fundada com o compromisso de resgatar a tradição da alta costura, a Fashion Mito nasceu da paixão pelo detalhe. Cada ponto, cada corte e cada ajuste é realizado com a precisão de um artista que entende que um fato não é apenas vestuário, mas uma extensão da personalidade.
+              Fundada com o compromisso de resgatar a tradição da alta costura, a Fashion Mito'o nasceu da paixão pelo detalhe. Cada ponto, cada corte e cada ajuste é realizado com a precisão de um artista que entende que um fato não é apenas vestuário, mas uma extensão da personalidade.
             </p>
             <p className="text-gray-400 leading-relaxed">
               Trabalhamos com os tecidos mais nobres do mercado local e internacional, garantindo um caimento impecável que valoriza a silhueta e proporciona conforto absoluto. Nossa missão é elevar sua confiança através da elegância atemporal.
@@ -332,10 +332,10 @@ const Services = () => {
 
 const Gallery = () => {
   const images = [
-    { src: '/formatura-rosa.jpg', alt: 'Grupo de formatura com vestidos rosa e fatos vermelhos - Fashion Mito', caption: 'Formatura - Vestidos de Gala e Fatos', span: 'col-span-2 row-span-2' },
-    { src: '/damas-praia.jpg', alt: 'Quatro damas de honor com vestidos salmon na praia - Fashion Mito', caption: 'Damas de Honor - Vestidos Salmon', span: 'col-span-2' },
-    { src: '/formatura-vermelha.jpg', alt: 'Grupo de formatura com vestidos vermelhos e camisas brancas - Fashion Mito', caption: 'Formatura - Vestidos Vermelhos', span: 'col-span-2 row-span-2' },
-    { src: '/damas-ferrugem.jpg', alt: 'Quatro damas com vestidos cor de ferrugem - Fashion Mito', caption: 'Damas de Honor - Vestidos Ferrugem', span: 'col-span-2' },
+    { src: '/formatura-rosa.jpg', alt: "Grupo de formatura com vestidos rosa e fatos vermelhos - Fashion Mito'o", caption: 'Formatura - Vestidos de Gala e Fatos', span: 'col-span-2 row-span-2' },
+    { src: '/damas-praia.jpg', alt: "Quatro damas de honor com vestidos salmon na praia - Fashion Mito'o", caption: 'Damas de Honor - Vestidos Salmon', span: 'col-span-2' },
+    { src: '/formatura-vermelha.jpg', alt: "Grupo de formatura com vestidos vermelhos e camisas brancas - Fashion Mito'o", caption: 'Formatura - Vestidos Vermelhos', span: 'col-span-2 row-span-2' },
+    { src: '/damas-ferrugem.jpg', alt: "Quatro damas com vestidos cor de ferrugem - Fashion Mito'o", caption: 'Damas de Honor - Vestidos Ferrugem', span: 'col-span-2' },
   ];
 
   return (
@@ -387,7 +387,7 @@ const Testimonials = () => {
     {
       name: "Ricardo Matsinhe",
       role: "Empresário",
-      text: "O Fashion Mito transformou completamente meu guarda-roupa. A atenção aos detalhes e o caimento do terno sob medida são incomparáveis.",
+      text: "O Fashion Mito'o transformou completamente meu guarda-roupa. A atenção aos detalhes e o caimento do terno sob medida são incomparáveis.",
       rating: 5
     },
     {
@@ -504,7 +504,7 @@ const Contact = () => {
             
             <div className="mt-16">
               <iframe
-                title="Localização Fashion Mito - Mahongage, Maxixe, Inhambane"
+                title="Localização Fashion Mito'o - Mahongage, Maxixe, Inhambane"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d35.3472!3d-23.8597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1f3e5b0000000000%3A0x0!2zMjPCsDUxJzM1LjAiUyAzNcKwMjAnNTAuMCJF!5e1!3m2!1spt!2smz!4v1&q=379X%2B77+Mahongage"
                 className="w-full h-48 md:h-72 border border-gold/10"
                 loading="lazy"
@@ -601,7 +601,7 @@ const Footer = () => {
         </div>
         
         <div className="text-center text-gray-600 text-[10px] uppercase tracking-widest">
-          © {new Date().getFullYear()} Fashion Mito. Todos os direitos reservados. Maputo, Moçambique.
+          © {new Date().getFullYear()} Fashion Mito'o. Todos os direitos reservados. Maputo, Moçambique.
         </div>
       </div>
     </footer>
