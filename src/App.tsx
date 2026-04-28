@@ -73,7 +73,7 @@ const Navbar = ({ onBookingOpen }: { onBookingOpen: () => void }) => {
           animate={{ opacity: 1 }}
           className="text-2xl font-serif tracking-widest text-white group"
         >
-          FASHION <span className="text-gold group-hover:text-white transition-colors duration-300">MITO</span>
+          FASHION <span className="text-gold group-hover:text-white transition-colors duration-300">MITO'O</span>
         </motion.a>
 
         {/* Desktop Menu */}
@@ -578,7 +578,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12 mb-16">
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-serif tracking-widest mb-4">FASHION <span className="text-gold">MITO</span></h2>
+            <h2 className="text-3xl font-serif tracking-widest mb-4">FASHION <span className="text-gold">MITO'O</span></h2>
             <p className="text-gray-500 max-w-sm">Especialistas em alfaiataria bespoke e ajustes de alta costura. Onde a tradição encontra o estilo contemporâneo.</p>
           </div>
           <div className="flex gap-8">
