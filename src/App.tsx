@@ -504,15 +504,15 @@ const Contact = () => {
             
             <div className="mt-16">
               <iframe
-                title="Localização Fashion Mito'o - Mahongage, Maxixe, Inhambane"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d35.3472!3d-23.8597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1f3e5b0000000000%3A0x0!2zMjPCsDUxJzM1LjAiUyAzNcKwMjAnNTAuMCJF!5e1!3m2!1spt!2smz!4v1&q=379X%2B77+Mahongage"
+                title="Localização Fashion Mito'o - 379X+77, Mahongage, Maxixe"
+                src="https://maps.google.com/maps?q=379X%2B77+Mahongage+Maxixe+Mozambique&output=embed&t=k"
                 className="w-full h-48 md:h-72 border border-gold/10"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
               />
               <a
-                href="https://maps.google.com/?q=379X%2B77+Mahongage+Maxixe"
+                href="https://maps.google.com/?q=379X%2B77+Mahongage+Maxixe+Mozambique"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-3 text-gold text-xs uppercase tracking-widest hover:text-white transition-colors"
