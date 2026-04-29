@@ -380,66 +380,6 @@ const Gallery = () => {
   );
 };
 
-// --- Testimonials ---
-
-const Testimonials = () => {
-  const reviews = [
-    {
-      name: "Ricardo Matsinhe",
-      role: "Empresário",
-      text: "O Fashion Mito'o transformou completamente meu guarda-roupa. A atenção aos detalhes e o caimento do terno sob medida são incomparáveis.",
-      rating: 5
-    },
-    {
-      name: "Elena Chivambo",
-      role: "Advogada",
-      text: "Excelente atendimento e profissionalismo. Fiz ajustes em vários vestidos de gala e o resultado foi perfeito cada vez.",
-      rating: 5
-    },
-    {
-      name: "Jorge Macuácua",
-      role: "CEO Tech",
-      text: "Alfaiataria de classe mundial no coração de Inhambane. Recomendo para qualquer pessoa que valoriza a elegância verdadeira.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <section id="testimonials" className="py-24 bg-atelier-pattern bg-black/50">
-      <div className="max-w-7xl mx-auto px-6">
-        <SectionTitle title="O Que Dizem" subtitle="Avaliações" />
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {reviews.map((review, i) => (
-            <motion.div
-              key={review.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="p-10 border border-gold/10 bg-black relative"
-            >
-              <div className="flex gap-1 mb-6">
-                {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} size={16} fill="#D4AF37" className="text-gold" />
-                ))}
-              </div>
-              <p className="text-gray-400 italic mb-8 leading-relaxed">"{review.text}"</p>
-              <div>
-                <h4 className="text-white font-serif text-xl">{review.name}</h4>
-                <p className="text-gold text-xs uppercase tracking-widest">{review.role}</p>
-              </div>
-              <div className="absolute top-8 right-8 opacity-10">
-                <MessageCircle size={40} className="text-gold" />
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
 // --- Contact ---
 
 const Contact = () => {
@@ -641,7 +581,6 @@ export default function App() {
       <About />
       <Services />
       <Gallery />
-      <Testimonials />
       <Contact />
       <Footer />
       <WhatsAppButton />
