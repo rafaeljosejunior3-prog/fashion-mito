@@ -217,7 +217,7 @@ const About = () => {
             <div className="absolute -top-6 -left-6 w-32 h-32 border-t-2 border-l-2 border-gold/40 z-0" />
             <img 
               src="/sobre-fundador.jpg" 
-              alt="Fundador da Fashion Mito'o - Alfaiataria em Maputo"
+              alt="Fundador da Fashion Mito'o - Alfaiataria em Inhambane"
               className="relative z-10 w-full aspect-3/4 object-contain bg-zinc-900"
               referrerPolicy="no-referrer"
             />
@@ -399,7 +399,7 @@ const Testimonials = () => {
     {
       name: "Jorge Macuácua",
       role: "CEO Tech",
-      text: "Alfaiataria de classe mundial no coração de Maputo. Recomendo para qualquer pessoa que valoriza a elegância verdadeira.",
+      text: "Alfaiataria de classe mundial no coração de Inhambane. Recomendo para qualquer pessoa que valoriza a elegância verdadeira.",
       rating: 5
     }
   ];
@@ -601,7 +601,7 @@ const Footer = () => {
         </div>
         
         <div className="text-center text-gray-600 text-[10px] uppercase tracking-widest">
-          © {new Date().getFullYear()} Fashion Mito'o. Todos os direitos reservados. Maputo, Moçambique.
+          © {new Date().getFullYear()} Fashion Mito'o. Todos os direitos reservados. Inhambane, Moçambique.
         </div>
       </div>
     </footer>
