@@ -428,7 +428,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-serif mb-2">Ligue ou WhatsApp</h4>
-                  <p className="text-gray-400">+258 87 831 8385<br />Mon - Sat: 08:00 - 18:00</p>
+                  <p className="text-gray-400">+258 86 928 4676<br />Mon - Sat: 08:00 - 18:00</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start group">
@@ -553,7 +553,7 @@ const Footer = () => {
 const WhatsAppButton = () => {
   return (
     <motion.a
-      href="https://wa.me/258878318385"
+      href="https://wa.me/258869284676"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}
