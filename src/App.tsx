@@ -149,10 +149,9 @@ const Hero = ({ onBookingOpen }: { onBookingOpen: () => void }) => {
       >
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1594932224010-74f4abaa8db1?auto=format&fit=crop&q=80&w=2000" 
-          alt="Tailor at work"
+          src="/logo.png" 
+          alt="Fashion Mito'o - Alfaiataria"
           className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
         />
       </motion.div>
 
