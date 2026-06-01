@@ -76,7 +76,7 @@ const Navbar = ({ onBookingOpen }: { onBookingOpen: () => void }) => {
           <img
             src="/logo.png"
             alt="Fashion Mito'o"
-            className="h-12 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </motion.a>
 
@@ -149,9 +149,10 @@ const Hero = ({ onBookingOpen }: { onBookingOpen: () => void }) => {
       >
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img 
-          src="/logo.png" 
-          alt="Fashion Mito'o - Alfaiataria"
+          src="https://images.unsplash.com/photo-1594932224010-74f4abaa8db1?auto=format&fit=crop&q=80&w=2000" 
+          alt="Tailor at work"
           className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
         />
       </motion.div>
 
