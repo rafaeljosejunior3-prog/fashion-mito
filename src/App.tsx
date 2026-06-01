@@ -343,7 +343,7 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-6">
         <SectionTitle title="Trabalhos Realizados" subtitle="Portfólio" />
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[220px] md:auto-rows-[250px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[160px] md:auto-rows-[180px]">
           {images.map((img, i) => (
             <motion.div
               key={i}
@@ -428,7 +428,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-serif mb-2">Ligue ou WhatsApp</h4>
-                  <p className="text-gray-400">+258 86 928 4676<br />Mon - Sat: 08:00 - 18:00</p>
+                  <p className="text-gray-400">+258 87 821 8385<br />Mon - Sat: 08:00 - 18:00</p>
                 </div>
               </div>
               <div className="flex gap-6 items-start group">
@@ -553,7 +553,7 @@ const Footer = () => {
 const WhatsAppButton = () => {
   return (
     <motion.a
-      href="https://wa.me/258869284676"
+      href="https://wa.me/258878218385"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}

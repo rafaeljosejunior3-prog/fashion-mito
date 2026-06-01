@@ -3,7 +3,7 @@ import type { BookingState, PersonalDetails, Service } from './bookingTypes';
 // Constants
 const AVAILABLE_DAYS = [1, 2, 3, 4, 5, 6]; // Monday to Saturday (0=Sunday, 6=Saturday)
 const BOOKING_HORIZON_DAYS = 60;
-const WHATSAPP_NUMBER = '258869284676';
+const WHATSAPP_NUMBER = '258878218385';
 
 /**
  * Check if a date is available for booking
