@@ -73,7 +73,11 @@ const Navbar = ({ onBookingOpen }: { onBookingOpen: () => void }) => {
           animate={{ opacity: 1 }}
           className="text-2xl font-serif tracking-widest text-white group"
         >
-          FASHION <span className="text-gold group-hover:text-white transition-colors duration-300">MITO'O</span>
+          <img
+            src="/logo.png"
+            alt="Fashion Mito'o"
+            className="h-12 w-auto object-contain"
+          />
         </motion.a>
 
         {/* Desktop Menu */}
