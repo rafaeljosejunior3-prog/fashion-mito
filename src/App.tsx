@@ -317,7 +317,8 @@ const Services = () => {
       title: 'Fatos Sob Medida',
       description: 'Experiência completa de alfaiataria bespoke, do desenho à entrega final.',
       icon: <Shirt className="text-gold" size={40} />,
-      image: 'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?auto=format&fit=crop&q=80&w=800'
+      image: '/Captura de tela 2026-06-02 142601.png',
+      contain: true
     },
     {
       title: 'Ajustes de Roupa',
