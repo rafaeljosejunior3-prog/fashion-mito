@@ -276,7 +276,8 @@ const Services = () => {
       title: 'Ajustes de Roupa',
       description: 'Transforme qualquer peça pronta com ajustes precisos que valorizam seu corpo.',
       icon: <Ruler className="text-gold" size={40} />,
-      image: '/Captura de tela 2026-06-02 135009.png'
+      image: '/Captura de tela 2026-06-02 135009.png',
+      contain: true
     },
     {
       title: 'Uniformes Corporativos',
@@ -311,7 +312,7 @@ const Services = () => {
                 <img 
                   src={service.image} 
                   alt={service.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                  className={`w-full h-full ${(service as any).contain ? 'object-contain' : 'object-cover group-hover:scale-110 transition-transform duration-700'}`}
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
