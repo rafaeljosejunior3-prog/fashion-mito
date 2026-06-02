@@ -495,7 +495,11 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-serif mb-2">E-mail</h4>
-                  <p className="text-gray-400">geral@fashionmito.co.mz<br />consultoria@fashionmito.co.mz</p>
+                  <p className="text-gray-400">
+                    <a href="mailto:rafaeljosejunior2@gmail.com" className="hover:text-gold transition-colors">
+                      rafaeljosejunior2@gmail.com
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
