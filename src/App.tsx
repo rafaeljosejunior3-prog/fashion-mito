@@ -276,7 +276,7 @@ const Services = () => {
       title: 'Ajustes de Roupa',
       description: 'Transforme qualquer peça pronta com ajustes precisos que valorizam seu corpo.',
       icon: <Ruler className="text-gold" size={40} />,
-      image: 'https://images.unsplash.com/photo-1558223126-6467335607ed?auto=format&fit=crop&q=80&w=800'
+      image: '/Captura de tela 2026-06-02 135009.png'
     },
     {
       title: 'Uniformes Corporativos',
