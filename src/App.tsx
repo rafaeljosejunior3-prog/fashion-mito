@@ -76,7 +76,7 @@ const Navbar = ({ onBookingOpen }: { onBookingOpen: () => void }) => {
           <img
             src="/logo.png"
             alt="Fashion Mito'o"
-            className="h-24 w-auto object-contain"
+            className="h-32 w-auto object-contain"
           />
         </motion.a>
 
