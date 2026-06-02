@@ -486,7 +486,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-xl font-serif mb-2">Ligue ou WhatsApp</h4>
-                  <p className="text-gray-400">+258 87 821 8385<br />Mon - Sat: 08:00 - 18:00</p>
+                  <p className="text-gray-400">
+                    <a href="tel:+258878218385" className="hover:text-gold transition-colors">+258 87 821 8385</a>
+                    <br />Mon - Sat: 08:00 - 18:00
+                  </p>
                 </div>
               </div>
               <div className="flex gap-6 items-start group">
