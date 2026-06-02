@@ -613,25 +613,7 @@ const Footer = () => {
   );
 };
 
-// --- WhatsApp Floating Button ---
-
-const WhatsAppButton = () => {
-  return (
-    <motion.a
-      href="https://wa.me/258878218385"
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      className="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-[100] group"
-    >
-      <MessageCircle size={32} />
-      <span className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 rounded-lg text-xs uppercase tracking-widest font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl border border-gold/20">
-        Fale Connosco
-      </span>
-    </motion.a>
-  );
-};
+// --- Main App Export ---};
 
 
 // --- Main App Export ---
@@ -648,7 +630,6 @@ export default function App() {
       <Gallery />
       <Contact />
       <Footer />
-      <WhatsAppButton />
       <BookingSystem isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </div>
   );
