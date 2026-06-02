@@ -3,10 +3,56 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion, useScroll, useTransform } from 'motion/react';
-import { Menu, X, Instagram, Facebook, Phone, MapPin, Scissors, Ruler, Shirt, ChevronRight, Star, MessageCircle, Send } from 'lucide-react';
-import { useState, useEffect, type FormEvent } from 'react';
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
+import { Menu, X, Instagram, Facebook, Phone, MapPin, Scissors, Ruler, Shirt, ChevronRight, Star, MessageCircle, Send, ZoomIn } from 'lucide-react';
+import { useState, useEffect, useCallback, type FormEvent } from 'react';
 import { BookingSystem } from './components/booking/BookingSystem';
+
+// --- Lightbox ---
+const Lightbox = ({ src, alt, onClose }: { src: string; alt: string; onClose: () => void }) => {
+  const handleKey = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') onClose();
+  }, [onClose]);
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [handleKey]);
+
+  return (
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-[200] flex items-center justify-center bg-black/90 p-4"
+        onClick={onClose}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-white hover:text-gold transition-colors z-10"
+          aria-label="Fechar"
+        >
+          <X size={36} />
+        </button>
+        <motion.img
+          initial={{ scale: 0.85, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.85, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 260, damping: 22 }}
+          src={src}
+          alt={alt}
+          className="max-w-full max-h-[90vh] object-contain rounded shadow-2xl"
+          onClick={(e) => e.stopPropagation()}
+        />
+      </motion.div>
+    </AnimatePresence>
+  );
+};
 
 // --- Shared Components ---
 
@@ -265,6 +311,7 @@ const About = () => {
 // --- Services ---
 
 const Services = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const services = [
     {
       title: 'Fatos Sob Medida',
@@ -308,14 +355,16 @@ const Services = () => {
               transition={{ delay: i * 0.1 }}
               className="group bg-black border border-gold/10 hover:border-gold/50 transition-all duration-300 overflow-hidden"
             >
-              <div className="h-48 overflow-hidden relative">
+              <div className="h-48 overflow-hidden relative cursor-pointer" onClick={() => setLightbox({ src: service.image, alt: service.title })}>
                 <img 
                   src={service.image} 
                   alt={service.title} 
                   className={`w-full h-full ${(service as any).contain ? 'object-contain' : 'object-cover group-hover:scale-110 transition-transform duration-700'}`}
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                  <ZoomIn size={28} className="text-white opacity-0 group-hover:opacity-100 transition-opacity drop-shadow" />
+                </div>
               </div>
               <div className="p-8">
                 <div className="mb-4">{service.icon}</div>
@@ -329,6 +378,7 @@ const Services = () => {
           ))}
         </div>
       </div>
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
     </section>
   );
 };
@@ -336,6 +386,7 @@ const Services = () => {
 // --- Gallery ---
 
 const Gallery = () => {
+  const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
   const images = [
     { src: '/formatura-rosa.jpg', alt: "Grupo de formatura com vestidos rosa e fatos vermelhos - Fashion Mito'o", caption: 'Formatura - Vestidos de Gala e Fatos', span: 'col-span-2 row-span-2' },
     { src: '/damas-praia.jpg', alt: "Quatro damas de honor com vestidos salmon na praia - Fashion Mito'o", caption: 'Damas de Honor - Vestidos Salmon', span: 'col-span-2' },
@@ -357,6 +408,7 @@ const Gallery = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className={`${img.span} relative overflow-hidden group cursor-pointer`}
+              onClick={() => setLightbox({ src: img.src, alt: img.alt })}
             >
               <img 
                 src={img.src} 
@@ -367,7 +419,7 @@ const Gallery = () => {
               <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/20 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-gold">
-                    <Star size={20} fill="currentColor" />
+                    <ZoomIn size={20} />
                   </div>
                 </div>
               </div>
@@ -381,6 +433,7 @@ const Gallery = () => {
           </button>
         </div>
       </div>
+      {lightbox && <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={() => setLightbox(null)} />}
     </section>
   );
 };
