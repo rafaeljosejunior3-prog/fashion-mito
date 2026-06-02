@@ -584,13 +584,13 @@ const Footer = () => {
             <p className="text-gray-500 max-w-sm">Especialistas em alfaiataria bespoke e ajustes de alta costura. Onde a tradição encontra o estilo contemporâneo.</p>
           </div>
           <div className="flex gap-8">
-            <a href="#" className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
-              <Instagram size={20} />
+            <a href="https://wa.me/258878218385" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Fashion Mito'o" className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
+              <MessageCircle size={20} />
             </a>
             <a href="https://www.facebook.com/miltonjosepascoal.zualo.9" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Mito o Jose Zualo" className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
               <Facebook size={20} />
             </a>
-            <a href="#" className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
+            <a href="tel:+258878218385" aria-label="Ligar para Fashion Mito'o" className="w-12 h-12 rounded-full border border-gold/20 flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all">
               <Phone size={20} />
             </a>
           </div>
