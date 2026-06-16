@@ -446,36 +446,21 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
-  const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_ENDPOINT || '';
-
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (FORMSPREE_URL) {
-      try {
-        const res = await fetch(FORMSPREE_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({ name: formState.name, email: formState.email, message: formState.message }),
-        });
-        if (res.ok) {
-          setIsSent(true);
-          setFormState({ name: '', email: '', message: '' });
-        }
-      } catch {
-        // fallback silencioso
-      } finally {
-        setIsSubmitting(false);
-      }
-    } else {
-      // Fallback: abre WhatsApp com a mensagem
-      const text = encodeURIComponent(`Nome: ${formState.name}\nEmail: ${formState.email}\n\n${formState.message}`);
-      window.open(`https://wa.me/258878218385?text=${text}`, '_blank');
+    const subject = encodeURIComponent(`Mensagem de ${formState.name} - Fashion Mito'o`);
+    const body = encodeURIComponent(
+      `Nome: ${formState.name}\nEmail: ${formState.email}\n\nMensagem:\n${formState.message}`
+    );
+    window.location.href = `mailto:fashionmitoo@gmail.com?subject=${subject}&body=${body}`;
+
+    setTimeout(() => {
       setIsSubmitting(false);
       setIsSent(true);
       setFormState({ name: '', email: '', message: '' });
-    }
+    }, 500);
   };
 
   return (
