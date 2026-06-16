@@ -500,8 +500,8 @@ const Contact = () => {
                 <div>
                   <h4 className="text-xl font-serif mb-2">E-mail</h4>
                   <p className="text-gray-400">
-                    <a href="mailto:rafaeljosejunior2@gmail.com" className="hover:text-gold transition-colors">
-                      rafaeljosejunior2@gmail.com
+                    <a href="mailto:fashionmitoo@gmail.com" className="hover:text-gold transition-colors">
+                      fashionmitoo@gmail.com
                     </a>
                   </p>
                 </div>
